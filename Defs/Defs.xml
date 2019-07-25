@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef>
+		<defName>Apparello_Steamhull</defName>
+		<label>prototype steamhull</label>
+		<description>Combination of mobility enhancing components of the Scyther frame and heavy plating of the Hive armor.
+		The increased energy consumption from the added scyther frame servos, have forced the shock dampeners work on lesser capacity,
+		thus rendering the wearer more vulnerable to injuries but the higher mobility under combat situations are well worth it. Generates absurd amounts of heat though.</description>
+		<thingClass>PowerCleaner.PowerCleaner</thingClass>
+		<category>Item</category>
+		<selectable>True</selectable>
+		<pathCost>10</pathCost>
+		<useHitPoints>False</useHitPoints>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<graphicData>
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+			<texPath>Apparel/Display/PowerCleaner</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<statBases>
+			<SellPriceFactor>0.5</SellPriceFactor>
+			<Mass>20</Mass>
+			<MarketValue>1000</MarketValue>
+			<WorkToMake>6000</WorkToMake>
+			<Flammability>0</Flammability>
+			<EquipDelay>15</EquipDelay>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li><compClass>CompQuality</compClass></li>
+		</comps>
+		<tradeability>Sellable</tradeability>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.25</MoveSpeed>
+			<WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
+		</equippedStatOffsets>
+		<apparel>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Apparel/PowerCleaner/Steamhull</wornGraphicPath>
+			<layers>
+				<li>Shell</li>
+			</layers>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>PowerCleaner_Water</defName>
+		<graphicData>
+			<texPath>Things/Water</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingClass>PowerCleaner.Water</thingClass>
+		<selectable>False</selectable>
+		<useHitPoints>False</useHitPoints>
+	</ThingDef>
+</Defs>
