@@ -21,6 +21,15 @@ namespace PowerCleaner
             foreach ( var gizmo in base.GetWornGizmos() )
                 yield return gizmo;
 
+            if ( !Wearer.Drafted )
+            {
+                command.disabled = true;
+                command.disabledReason = "IsNotDrafted".Translate( Wearer.LabelShort, Wearer );
+            }
+            else
+            {
+                command.disabled = false;
+            }
             yield return command;
         }
     }

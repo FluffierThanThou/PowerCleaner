@@ -1,6 +1,7 @@
 ﻿// Resources.cs
 // Copyright Karel Kroeze, -2019
 
+using System.Linq;
 using UnityEngine;
 using Verse;
 
@@ -9,10 +10,13 @@ namespace PowerCleaner
     [StaticConstructorOnStartup]
     public static class Resources
     {
-        public static readonly Texture2D PowerCleanerIcon;
+        public static readonly Texture2D SprayIcon;
+        public static readonly Texture2D[] WaterSprites;
+
         static Resources()
         {
-            PowerCleanerIcon = ContentFinder<Texture2D>.Get( "UI/Icons/PowerCleaner" );
+            SprayIcon = ContentFinder<Texture2D>.Get( "UI/Icons/Spray" );
+            WaterSprites = ContentFinder<Texture2D>.GetAllInFolder( "Water" ).ToArray();
         }
     }
 }

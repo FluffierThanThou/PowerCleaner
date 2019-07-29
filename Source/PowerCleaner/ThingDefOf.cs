@@ -9,6 +9,13 @@ namespace PowerCleaner
     [DefOf]
     public static class ThingDefOf
     {
-        public static ThingDef PowerCleaner_WaterDef;
+        public static ThingDef PowerCleaner;
+        public static ThingDef PowerCleaner_Water;
+    }
+
+    [DefOf]
+    public static class ThoughtDefOf
+    {
+        public static ThoughtDef SoakingWet;
     }
 }

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingDef>
-		<defName>Apparello_Steamhull</defName>
-		<label>prototype steamhull</label>
-		<description>Combination of mobility enhancing components of the Scyther frame and heavy plating of the Hive armor.
-		The increased energy consumption from the added scyther frame servos, have forced the shock dampeners work on lesser capacity,
-		thus rendering the wearer more vulnerable to injuries but the higher mobility under combat situations are well worth it. Generates absurd amounts of heat though.</description>
+		<defName>PowerCleaner</defName>
+		<label>power cleaner</label>
+		<description>a portable power cleaner.</description>
 		<thingClass>PowerCleaner.PowerCleaner</thingClass>
 		<category>Item</category>
 		<selectable>True</selectable>
@@ -55,12 +53,15 @@
 
 	<ThingDef>
 		<defName>PowerCleaner_Water</defName>
+		<label>water droplets</label>
+		<description>Water projectile-like thing.</description>
 		<graphicData>
-			<texPath>Things/Water</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Sprites/Water</texPath>
+			<graphicClass>PowerCleaner.Graphic_Sprite</graphicClass>
 		</graphicData>
 		<thingClass>PowerCleaner.Water</thingClass>
 		<selectable>False</selectable>
 		<useHitPoints>False</useHitPoints>
+		<tickerType>Normal</tickerType>
 	</ThingDef>
 </Defs>

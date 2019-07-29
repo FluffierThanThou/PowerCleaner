@@ -2,6 +2,7 @@
 // Copyright Karel Kroeze, -2019
 
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace PowerCleaner
@@ -10,11 +11,12 @@ namespace PowerCleaner
     {
         public Command_PowerCleaner( PowerCleaner cleaner )
         {
-            icon = Resources.PowerCleanerIcon;
             defaultLabel = "Fluffy.PowerCleaner.Clean".Translate();
             defaultDesc = "Fluffy.PowerCleaner.Desc".Translate();
-
+            icon = ThingDefOf.PowerCleaner.graphicData.Graphic.MatNorth.mainTexture as Texture2D;
             action = () => Find.CurrentMap.GetComponent<MapComponent_PowerCleaner>().ActivePowerCleaner = cleaner;
         }
+
+        
     }
 }
